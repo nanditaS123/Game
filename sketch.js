@@ -226,7 +226,7 @@ if (gameState === 5) {
   text("- Click keys 1,2, and 3 to plant your 3 flowers", 80, 340);
   text("- Click keys 4,5, and 6 to plant your 3 trees", 80, 400);
   text("You will have a count of how many flowers and trees you", 80, 460);
-  text("have left to plant, once you've used all of them, you're done!", 80, 520);
+  text("have planted so far. Once you've planted them all, you're done!", 80, 520);
 
   
   textSize(20);
