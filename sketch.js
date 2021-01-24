@@ -11,7 +11,7 @@ var gameState = 0;
 var player_front, player_back, player_right, player_left;
 var player;
 
-var garbageCount = 6;
+var garbageCount = 7;
 var flowerCount = 0;
 var treesCount = 0;
 
@@ -39,6 +39,7 @@ function setup(){
    garbage4 = createSprite(700,200,89,89);
    garbage5 = createSprite(600,670,69,69);
    garbage6 = createSprite(320,120,79,79);
+   garbage7 = createSprite(220,30,69,69);
 
    garbage1.addImage("garbage_",garbage);  
    garbage2.addImage("garbage_",garbage);
@@ -46,6 +47,8 @@ function setup(){
    garbage4.addImage("garbage_",garbage);
    garbage5.addImage("garbage_",garbage);
    garbage6.addImage("garbage_",garbage);
+   garbage7.addImage("garbage_",garbage);
+
 
 
 
@@ -138,6 +141,7 @@ if (gameState === 3) {
   garbage4.display();
   garbage5.display();
   garbage6.display();
+  garbage7.display();
 
   player.display();
 
@@ -167,6 +171,11 @@ if (gameState === 3) {
   }
 
   if (player.collide(garbage6)) {
+    garbage6.visible = false;
+    garbageCount = garbageCount - 1;
+  }
+  
+  if (player.collide(garbage7)) {
     garbage6.visible = false;
     garbageCount = garbageCount - 1;
   }
